@@ -6,18 +6,29 @@
 </p>
 
 <p>
-  <strong>Postal code:</strong>
+  <strong>Zip:</strong>
   <%= @town.postal_code %>
 </p>
 
 <p>
-  <strong>Lattitude:</strong>
+  <strong>Latitude:</strong>
   <%= @town.lattitude %>
 </p>
 
 <p>
   <strong>Longitude:</strong>
   <%= @town.longitude %>
+</p>
+
+<p>
+  <strong>Météo :</strong>
+  <%= @town.forecast['summary']%>
+  <br/>
+  <strong>Température :</strong>
+  <%= @town.forecast['temperature']%>°C
+  <br/>
+  <strong>Humidité :</strong>
+  <%= @town.forecast['humidity'].to_f * 100 %>
 </p>
 
 <%= link_to 'Edit', edit_town_path(@town) %> |
