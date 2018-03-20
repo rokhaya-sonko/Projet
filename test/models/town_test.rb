@@ -1,4 +1,6 @@
 require 'test_helper'
+require 'forecast_io'
+
 
 class TownTest < ActiveSupport::TestCase
   # test "the truth" do
