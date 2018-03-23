@@ -1,6 +1,17 @@
+env:
+  global:
+    - CC_TEST_REPORTER_ID=f9fecff72cf43ea395153a66dd4453ee14b7733fcf56705325396aedaa67bf3d
 language: ruby
 rvm:
 - 2.3.5
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+script:
+  - bundle exec rake $TASKS
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 deploy:
   provider: heroku
   api_key:
