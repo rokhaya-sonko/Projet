@@ -11,7 +11,8 @@ before_script:
 script:
   - bundle exec rake $TASKS
 after_script:
-  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+ <!-- - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT 
+ -->
 deploy:
   provider: heroku
   api_key:
