@@ -159,6 +159,7 @@ DEPENDENCIES
   forecast_io
   jbuilder (~> 2.0)
   jquery-rails
+  json
   nominatim (~> 0.0.6)
   pg (~> 0.20)
   rails (= 4.2.10)
