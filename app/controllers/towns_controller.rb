@@ -10,7 +10,8 @@ class TownsController < ApplicationController
   # GET /towns/1
   # GET /towns/1.json
   def show
-  end
+￼     @forecast = @town.forecast
+￼    end
 
   # GET /towns/new
   def new
