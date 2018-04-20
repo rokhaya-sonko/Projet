@@ -47,3 +47,5 @@ gem 'forecast_io'
 
 # Implement json
 gem 'json'
+
+gem 'rack-cors'
