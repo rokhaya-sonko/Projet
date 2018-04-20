@@ -44,3 +44,6 @@ gem 'nominatim', '~> 0.0.6'
 
 # Forecast
 gem 'forecast_io'
+
+#Json
+gem 'json'
